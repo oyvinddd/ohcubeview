@@ -30,7 +30,7 @@ public class OHCubeView: UIScrollView, UIScrollViewDelegate {
         super.layoutSubviews()
     }
     
-    func addChildViews(views: [UIView]) {
+    public func addChildViews(views: [UIView]) {
         
         let w = bounds.size.width
         let h = bounds.size.height
@@ -52,7 +52,7 @@ public class OHCubeView: UIScrollView, UIScrollViewDelegate {
         addChildViews([view])
     }
     
-    func scrollToViewAtIndex(index: Int, animated: Bool) {
+    public func scrollToViewAtIndex(index: Int, animated: Bool) {
         if index > -1 && index < childViews.count {
             
             let width = self.frame.size.width
