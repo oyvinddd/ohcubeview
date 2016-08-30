@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name           = "OHCubeView"
-  s.version        = "0.0.1"
+  s.version        = "0.1.0"
   s.summary        = "UIScrollView subclass. Inspired by the Instagram Stories cube."
 
   # This description is used to generate tags and improve search results.
