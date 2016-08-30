@@ -285,6 +285,7 @@
 				8E6CB4571D75706900D9E045 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

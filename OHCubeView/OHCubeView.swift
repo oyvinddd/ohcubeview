@@ -13,7 +13,7 @@ import UIKit
     optional func cubeViewDidScroll(cubeView: OHCubeView)
 }
 
-class OHCubeView: UIScrollView, UIScrollViewDelegate {
+public class OHCubeView: UIScrollView, UIScrollViewDelegate {
     
     weak var cubeDelegate: OHCubeViewDelegate?
     
@@ -21,12 +21,12 @@ class OHCubeView: UIScrollView, UIScrollViewDelegate {
     
     private var childViews = [UIView]()
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         configureScrollView()
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
     }
     
@@ -44,13 +44,11 @@ class OHCubeView: UIScrollView, UIScrollViewDelegate {
             addSubview(view)
             
             childViews.append(view)
-            
-            addShadowLayerToView(view)
         }
         contentSize = CGSizeMake(CGFloat(childViews.count) * w, h)
     }
     
-    func addChildView(view: UIView) {
+    public func addChildView(view: UIView) {
         addChildViews([view])
     }
     
@@ -67,7 +65,7 @@ class OHCubeView: UIScrollView, UIScrollViewDelegate {
     
     // MARK: Scroll view delegate
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    public func scrollViewDidScroll(scrollView: UIScrollView) {
         transformViewsInScrollView(scrollView)
         cubeDelegate?.cubeViewDidScroll?(self)
     }
@@ -76,7 +74,8 @@ class OHCubeView: UIScrollView, UIScrollViewDelegate {
     
     private func configureScrollView() {
         
-        backgroundColor = UIColor(red:0.05, green:0.10, blue:0.14, alpha:1.0)
+        //backgroundColor = UIColor(red:0.05, green:0.10, blue:0.14, alpha:1.0)
+        backgroundColor = UIColor.whiteColor()
         showsHorizontalScrollIndicator = false
         showsVerticalScrollIndicator = false
         pagingEnabled = true
@@ -109,17 +108,6 @@ class OHCubeView: UIScrollView, UIScrollViewDelegate {
             
             applyShadowForView(view, index: index)
         }
-    }
-    
-    private func addShadowLayerToView(view: UIView) {
-        
-        let shadowLayer = CALayer()
-        shadowLayer.frame = view.bounds
-        shadowLayer.opaque = false
-        shadowLayer.opacity = 0.0
-        shadowLayer.backgroundColor = UIColor.blackColor().CGColor
-        
-        //view.layer.addSublayer(shadowLayer)
     }
     
     private func applyShadowForView(view: UIView, index: Int) {

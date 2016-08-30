@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name           = "OHCubeView"
-  s.version        = "0.1.0"
+  s.version        = "0.2.0"
   s.summary        = "UIScrollView subclass. Inspired by the Instagram Stories cube."
 
   # This description is used to generate tags and improve search results.
@@ -69,7 +69,7 @@ paging between stories has a 3D cube animation.
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -95,8 +95,7 @@ paging between stories has a 3D cube animation.
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files = "OHCubeView/*.{swift}"
 
   # s.public_header_files = "Classes/**/*.h"
 
