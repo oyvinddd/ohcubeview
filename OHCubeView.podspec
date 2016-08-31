@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name           = "OHCubeView"
-  s.version        = "0.3.0"
+  s.version        = "0.9.0"
   s.summary        = "UIScrollView subclass. Inspired by the Instagram Stories cube."
 
   # This description is used to generate tags and improve search results.
@@ -43,9 +43,7 @@ paging between stories has a 3D cube animation.
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  # s.license      = "MIT (example)"
-  s.license      = { :type => "MIT", :file => "LICENSE" }
-
+  s.license = "MIT"
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -57,10 +55,7 @@ paging between stories has a 3D cube animation.
   #  profile URL.
   #
 
-  s.author             = { "Øyvind Hauge" => "post@ohauge.net" }
-  # Or just: s.author    = "Øyvind Hauge"
-  # s.authors            = { "Øyvind Hauge" => "hauge@apphuset.com" }
-  # s.social_media_url   = "http://twitter.com/Øyvind Hauge"
+  s.author = { "Øyvind Hauge" => "post@ohauge.net" }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -68,8 +63,7 @@ paging between stories has a 3D cube animation.
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # s.platform     = :ios
-  s.platform     = :ios, "8.0"
+  s.platform = :ios, "9.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -84,7 +78,7 @@ paging between stories has a 3D cube animation.
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/oyvind-hauge/OHCubeView.git", :tag => "#{s.version}" }
+  s.source = { :git => "https://github.com/oyvind-hauge/OHCubeView.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

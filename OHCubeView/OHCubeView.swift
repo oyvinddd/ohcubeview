@@ -8,11 +8,13 @@
 
 import UIKit
 
+@available(iOS 9.0, *)
 @objc protocol OHCubeViewDelegate: class {
     
     optional func cubeViewDidScroll(cubeView: OHCubeView)
 }
 
+@available(iOS 9.0, *)
 public class OHCubeView: UIScrollView, UIScrollViewDelegate {
     
     weak var cubeDelegate: OHCubeViewDelegate?
@@ -20,6 +22,15 @@ public class OHCubeView: UIScrollView, UIScrollViewDelegate {
     private let maxAngle: CGFloat = 60.0
     
     private var childViews = [UIView]()
+    
+    private lazy var stackView: UIStackView = {
+        
+        let sv = UIStackView()
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        sv.axis = UILayoutConstraintAxis.Horizontal
+        
+        return sv
+    }()
     
     public override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,20 +43,40 @@ public class OHCubeView: UIScrollView, UIScrollViewDelegate {
     
     public func addChildViews(views: [UIView]) {
         
-        let w = bounds.size.width
-        let h = bounds.size.height
-        
-        for index in 0 ..< views.count {
+        for view in views {
             
-            let view = views[index]
-            
-            view.frame = CGRectMake(CGFloat(index) * w, 0, w, h)
             view.layer.masksToBounds = true
-            addSubview(view)
+            stackView.addArrangedSubview(view)
+            
+            addConstraint(NSLayoutConstraint(
+                item: view,
+                attribute: NSLayoutAttribute.Width,
+                relatedBy: NSLayoutRelation.Equal,
+                toItem: self,
+                attribute: NSLayoutAttribute.Width,
+                multiplier: 1,
+                constant: 0)
+            )
             
             childViews.append(view)
         }
-        contentSize = CGSizeMake(CGFloat(childViews.count) * w, h)
+        
+        /*
+         let w = bounds.size.width
+         let h = bounds.size.height
+         
+         for index in 0 ..< views.count {
+         
+         let view = views[index]
+         
+         view.frame = CGRectMake(CGFloat(index) * w, 0, w, h)
+         view.layer.masksToBounds = true
+         addSubview(view)
+         
+         childViews.append(view)
+         }
+         */
+        //contentSize = CGSizeMake(CGFloat(childViews.count) * w, h)
     }
     
     public func addChildView(view: UIView) {
@@ -74,14 +105,78 @@ public class OHCubeView: UIScrollView, UIScrollViewDelegate {
     
     private func configureScrollView() {
         
-        //backgroundColor = UIColor(red:0.05, green:0.10, blue:0.14, alpha:1.0)
-        backgroundColor = UIColor.whiteColor()
+        // Configure scroll view properties
+        
+        backgroundColor = UIColor.blackColor()
         showsHorizontalScrollIndicator = false
         showsVerticalScrollIndicator = false
         pagingEnabled = true
         bounces = true
-        
         delegate = self
+        
+        // Add layout constraints
+        
+        addSubview(stackView)
+        
+        addConstraint(NSLayoutConstraint(
+            item: stackView,
+            attribute: NSLayoutAttribute.Leading,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: self,
+            attribute: NSLayoutAttribute.Leading,
+            multiplier: 1,
+            constant: 0)
+        )
+        
+        addConstraint(NSLayoutConstraint(
+            item: stackView,
+            attribute: NSLayoutAttribute.Top,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: self,
+            attribute: NSLayoutAttribute.Top,
+            multiplier: 1,
+            constant: 0)
+        )
+        
+        addConstraint(NSLayoutConstraint(
+            item: stackView,
+            attribute: NSLayoutAttribute.Height,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: self,
+            attribute: NSLayoutAttribute.Height,
+            multiplier: 1,
+            constant: 0)
+        )
+        
+        addConstraint(NSLayoutConstraint(
+            item: stackView,
+            attribute: NSLayoutAttribute.CenterY,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: self,
+            attribute: NSLayoutAttribute.CenterY,
+            multiplier: 1,
+            constant: 0)
+        )
+        
+        addConstraint(NSLayoutConstraint(
+            item: self,
+            attribute: NSLayoutAttribute.Trailing,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: stackView,
+            attribute: NSLayoutAttribute.Trailing,
+            multiplier: 1,
+            constant: 0)
+        )
+        
+        addConstraint(NSLayoutConstraint(
+            item: self,
+            attribute: NSLayoutAttribute.Bottom,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: stackView,
+            attribute: NSLayoutAttribute.Bottom,
+            multiplier: 1,
+            constant: 0)
+        )
     }
     
     private func transformViewsInScrollView(scrollView: UIScrollView) {
