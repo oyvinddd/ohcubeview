@@ -1,11 +1,12 @@
 # OHCubeView
-Inspired by the Instagram Stories cube.
+Scroll view subclass inspired by the Instagram Stories cube.
 
 ## Installation
 
-### Manual
-
 ### CocoaPods
 
+`pod 'OHCubeView'`
+
 ## Usage
+
 TODO
