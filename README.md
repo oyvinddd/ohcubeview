@@ -5,7 +5,7 @@ Scroll view subclass inspired by the Instagram Stories cube.
 
 ### CocoaPods
 
-`pod 'OHCubeView'`
+In your podfile, add `pod 'OHCubeView'` and run `pod install`. Done!
 
 ## Usage
 
