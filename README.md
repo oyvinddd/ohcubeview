@@ -1,6 +1,12 @@
 # OHCubeView
 Scroll view subclass inspired by the Instagram Stories cube.
 
+![demonstration](/ohcubeview2.gif)
+
+### Requirements
+- iOS >= 9.0
+- Autolayout
+
 ## Installation
 
 ### CocoaPods
