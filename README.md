@@ -9,7 +9,7 @@ Scroll view subclass inspired by the Instagram Stories cube.
 
 ## Usage
 
-1. Using interface builder, add a UIScrollView instance to the storyboard and make it a subclass of OHCubeView
+1. Using interface builder, add a UIScrollView instance to the storyboard and make it a subclass of OHCubeView. Hook the instance up to an `IBOutlet` in the view controller.
 
 ![Usage 1](/usage-1.png)
 
