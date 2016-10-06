@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Create subviews for our cube view (in this case, five image views)
+        // 1. Create subviews for our cube view (in this case, five image views)
         
         let iv1 = UIImageView(image: UIImage(named: "img1"))
         let iv2 = UIImageView(image: UIImage(named: "img2"))
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         let iv4 = UIImageView(image: UIImage(named: "img4"))
         let iv5 = UIImageView(image: UIImage(named: "img5"))
         
-        // Ad the subview to the cube view
+        // 2. Add all subviews to the cube view
         
         cubeView.addChildViews([iv1, iv2, iv3, iv4, iv5])
     }
