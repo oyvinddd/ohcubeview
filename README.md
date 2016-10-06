@@ -21,8 +21,33 @@ In your podfile, add `pod 'OHCubeView'` and run `pod install`. Done!
 
 - In your view controller, programmatically add subviews to the cube view (note that this can be any kind of UIView subclass). Layout constraints are automatically added to the subviews.
 
-![Usage 1](/usage-2.png)
+```swift
+import UIKit
+import OHCubeView
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var cubeView: OHCubeView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Create subviews for our cube view (in this case, five image views)
+        
+        let iv1 = UIImageView(image: UIImage(named: "img1"))
+        let iv2 = UIImageView(image: UIImage(named: "img2"))
+        let iv3 = UIImageView(image: UIImage(named: "img3"))
+        let iv4 = UIImageView(image: UIImage(named: "img4"))
+        let iv5 = UIImageView(image: UIImage(named: "img5"))
+        
+        // Ad the subview to the cube view
+        
+        cubeView.addChildViews([iv1, iv2, iv3, iv4, iv5])
+    }
+}
+```
 
 ## TODOs
 - Swift 3 support
 - Support for infinite paging
+- Add custom delegate methods
