@@ -15,11 +15,11 @@ In your podfile, add `pod 'OHCubeView'` and run `pod install`. Done!
 
 ## Usage
 
-1. Using interface builder, add a UIScrollView instance to the storyboard and make it a subclass of OHCubeView. Hook the instance up to an `IBOutlet` in the view controller.
+- Using interface builder, add a UIScrollView instance to the storyboard and make it a subclass of OHCubeView. Hook the instance up to an `IBOutlet` in the view controller.
 
 ![Usage 1](/usage-1.png)
 
-2. In your view controller, programmatically add subviews to the cube view (note that this can be any kind of UIView subclass). Layout constraints are automatically added to the subviews.
+- In your view controller, programmatically add subviews to the cube view (note that this can be any kind of UIView subclass). Layout constraints are automatically added to the subviews.
 
 ![Usage 1](/usage-2.png)
 
