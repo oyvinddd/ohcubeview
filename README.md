@@ -1,7 +1,7 @@
 # OHCubeView
 Scroll view subclass inspired by the Instagram Stories cube.
 
-![demonstration](/ohcubeview-demonstration.gif)
+![demonstration](/Resources/ohcubeview-demonstration.gif)
 
 ### Requirements
 - iOS >= 9.0
@@ -17,7 +17,7 @@ In your podfile, add `pod 'OHCubeView'` and run `pod install`. Done!
 
 - Using interface builder, add a UIScrollView instance to the storyboard and make it a subclass of OHCubeView. Hook the instance up to an `IBOutlet` in the view controller.
 
-![Usage 1](/usage-1.png)
+![Usage 1](/Resources/usage-1.png)
 
 - In your view controller, programmatically add subviews to the cube view (note that this can be any kind of UIView subclass). Layout constraints are automatically added to the subviews.
 
