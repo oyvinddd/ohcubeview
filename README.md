@@ -7,7 +7,7 @@ Scroll view subclass inspired by the Instagram Stories cube.
 - iOS >= 9.0
 - Autolayout
 
-N.B.
+#### N.B.
 Only supports portrait mode.
 
 ## Installation
