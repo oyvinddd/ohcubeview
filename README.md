@@ -51,6 +51,5 @@ class ViewController: UIViewController {
 ```
 
 ## TODOs
-- Swift 3 support
 - Support for infinite paging
 - Add custom delegate methods
