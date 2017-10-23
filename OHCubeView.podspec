@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name           = "OHCubeView"
-  s.version        = "0.9.0"
+  s.version        = "1.0.0"
   s.summary        = "UIScrollView subclass. Inspired by the Instagram Stories cube."
 
   # This description is used to generate tags and improve search results.
@@ -55,7 +55,7 @@ paging between stories has a 3D cube animation.
   #  profile URL.
   #
 
-  s.author = { "Øyvind Hauge" => "post@ohauge.net" }
+  s.author = { "Øyvind Hauge" => "oyvindhauge.apps@gmail.com" }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
