@@ -37,6 +37,15 @@ open class OHCubeView: UIScrollView, UIScrollViewDelegate {
         configureScrollView()
     }
     
+    open override init(frame: CGRect) {
+        super.init(frame: frame)
+        configureScrollView()
+    }
+    
+    open required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     open override func layoutSubviews() {
         super.layoutSubviews()
     }
