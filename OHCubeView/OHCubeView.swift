@@ -27,7 +27,7 @@ open class OHCubeView: UIScrollView, UIScrollViewDelegate {
         
         let sv = UIStackView()
         sv.translatesAutoresizingMaskIntoConstraints = false
-        sv.axis = UILayoutConstraintAxis.horizontal
+        sv.axis = NSLayoutConstraint.Axis.horizontal
         
         return sv
     }()
@@ -37,12 +37,12 @@ open class OHCubeView: UIScrollView, UIScrollViewDelegate {
         configureScrollView()
     }
     
-    open override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         configureScrollView()
     }
     
-    open required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -59,33 +59,16 @@ open class OHCubeView: UIScrollView, UIScrollViewDelegate {
             
             addConstraint(NSLayoutConstraint(
                 item: view,
-                attribute: NSLayoutAttribute.width,
-                relatedBy: NSLayoutRelation.equal,
+                attribute: NSLayoutConstraint.Attribute.width,
+                relatedBy: NSLayoutConstraint.Relation.equal,
                 toItem: self,
-                attribute: NSLayoutAttribute.width,
+                attribute: NSLayoutConstraint.Attribute.width,
                 multiplier: 1,
                 constant: 0)
             )
             
             childViews.append(view)
         }
-        
-        /*
-         let w = bounds.size.width
-         let h = bounds.size.height
-         
-         for index in 0 ..< views.count {
-         
-         let view = views[index]
-         
-         view.frame = CGRectMake(CGFloat(index) * w, 0, w, h)
-         view.layer.masksToBounds = true
-         addSubview(view)
-         
-         childViews.append(view)
-         }
-         */
-        //contentSize = CGSizeMake(CGFloat(childViews.count) * w, h)
     }
     
     open func addChildView(_ view: UIView) {
@@ -129,60 +112,60 @@ open class OHCubeView: UIScrollView, UIScrollViewDelegate {
         
         addConstraint(NSLayoutConstraint(
             item: stackView,
-            attribute: NSLayoutAttribute.leading,
-            relatedBy: NSLayoutRelation.equal,
+            attribute: NSLayoutConstraint.Attribute.leading,
+            relatedBy: NSLayoutConstraint.Relation.equal,
             toItem: self,
-            attribute: NSLayoutAttribute.leading,
+            attribute: NSLayoutConstraint.Attribute.leading,
             multiplier: 1,
             constant: 0)
         )
         
         addConstraint(NSLayoutConstraint(
             item: stackView,
-            attribute: NSLayoutAttribute.top,
-            relatedBy: NSLayoutRelation.equal,
+            attribute: NSLayoutConstraint.Attribute.top,
+            relatedBy: NSLayoutConstraint.Relation.equal,
             toItem: self,
-            attribute: NSLayoutAttribute.top,
+            attribute: NSLayoutConstraint.Attribute.top,
             multiplier: 1,
             constant: 0)
         )
         
         addConstraint(NSLayoutConstraint(
             item: stackView,
-            attribute: NSLayoutAttribute.height,
-            relatedBy: NSLayoutRelation.equal,
+            attribute: NSLayoutConstraint.Attribute.height,
+            relatedBy: NSLayoutConstraint.Relation.equal,
             toItem: self,
-            attribute: NSLayoutAttribute.height,
+            attribute: NSLayoutConstraint.Attribute.height,
             multiplier: 1,
             constant: 0)
         )
         
         addConstraint(NSLayoutConstraint(
             item: stackView,
-            attribute: NSLayoutAttribute.centerY,
-            relatedBy: NSLayoutRelation.equal,
+            attribute: NSLayoutConstraint.Attribute.centerY,
+            relatedBy: NSLayoutConstraint.Relation.equal,
             toItem: self,
-            attribute: NSLayoutAttribute.centerY,
+            attribute: NSLayoutConstraint.Attribute.centerY,
             multiplier: 1,
             constant: 0)
         )
         
         addConstraint(NSLayoutConstraint(
             item: self,
-            attribute: NSLayoutAttribute.trailing,
-            relatedBy: NSLayoutRelation.equal,
+            attribute: NSLayoutConstraint.Attribute.trailing,
+            relatedBy: NSLayoutConstraint.Relation.equal,
             toItem: stackView,
-            attribute: NSLayoutAttribute.trailing,
+            attribute: NSLayoutConstraint.Attribute.trailing,
             multiplier: 1,
             constant: 0)
         )
         
         addConstraint(NSLayoutConstraint(
             item: self,
-            attribute: NSLayoutAttribute.bottom,
-            relatedBy: NSLayoutRelation.equal,
+            attribute: NSLayoutConstraint.Attribute.bottom,
+            relatedBy: NSLayoutConstraint.Relation.equal,
             toItem: stackView,
-            attribute: NSLayoutAttribute.bottom,
+            attribute: NSLayoutConstraint.Attribute.bottom,
             multiplier: 1,
             constant: 0)
         )
