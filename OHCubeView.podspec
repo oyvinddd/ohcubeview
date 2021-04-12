@@ -90,7 +90,7 @@ paging between stories has a 3D cube animation.
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files = "OHCubeView/*.{swift}"
+  s.source_files = "OHCubeView/*.{swift}", "OHCubeView/PageController/*.{swift}"
 
   # s.public_header_files = "Classes/**/*.h"
 

@@ -7,11 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		253EFC44262252A80063D596 /* OHCubeBasePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253EFC43262252A80063D596 /* OHCubeBasePageController.swift */; };
+		253EFC4A26225B040063D596 /* OHCubePagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253EFC4926225B040063D596 /* OHCubePagerView.swift */; };
+		2551CA412624226500916F4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551CA402624226500916F4B /* AppDelegate.swift */; };
+		2551CA432624226500916F4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551CA422624226500916F4B /* SceneDelegate.swift */; };
+		2551CA452624226500916F4B /* DelegationWithViewControllerPagingExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551CA442624226500916F4B /* DelegationWithViewControllerPagingExample.swift */; };
+		2551CA482624226500916F4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2551CA462624226500916F4B /* Main.storyboard */; };
+		2551CA4A2624226A00916F4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2551CA492624226A00916F4B /* Assets.xcassets */; };
+		2551CA4D2624226A00916F4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2551CA4B2624226A00916F4B /* LaunchScreen.storyboard */; };
+		2551CA7C2624346900916F4B /* ProgrammaticWithViewImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551CA7B2624346900916F4B /* ProgrammaticWithViewImplementation.swift */; };
 		8E6CB4511D75706900D9E045 /* OHCubeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E6CB4501D75706900D9E045 /* OHCubeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E6CB4591D75717100D9E045 /* OHCubeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6CB4581D75717100D9E045 /* OHCubeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		253EFC43262252A80063D596 /* OHCubeBasePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OHCubeBasePageController.swift; sourceTree = "<group>"; };
+		253EFC4926225B040063D596 /* OHCubePagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OHCubePagerView.swift; sourceTree = "<group>"; };
+		2551CA3E2624226500916F4B /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2551CA402624226500916F4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2551CA422624226500916F4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2551CA442624226500916F4B /* DelegationWithViewControllerPagingExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegationWithViewControllerPagingExample.swift; sourceTree = "<group>"; };
+		2551CA472624226500916F4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2551CA492624226A00916F4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2551CA4C2624226A00916F4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2551CA4E2624226A00916F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2551CA7B2624346900916F4B /* ProgrammaticWithViewImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammaticWithViewImplementation.swift; sourceTree = "<group>"; };
 		8E6CB44D1D75706900D9E045 /* OHCubeView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OHCubeView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E6CB4501D75706900D9E045 /* OHCubeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OHCubeView.h; sourceTree = "<group>"; };
 		8E6CB4521D75706900D9E045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -19,6 +39,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2551CA3B2624226500916F4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8E6CB4491D75706900D9E045 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,10 +56,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		253EFC4826225AA80063D596 /* PageController */ = {
+			isa = PBXGroup;
+			children = (
+				253EFC43262252A80063D596 /* OHCubeBasePageController.swift */,
+				253EFC4926225B040063D596 /* OHCubePagerView.swift */,
+			);
+			path = PageController;
+			sourceTree = "<group>";
+		};
+		2551CA3F2624226500916F4B /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				2551CA402624226500916F4B /* AppDelegate.swift */,
+				2551CA422624226500916F4B /* SceneDelegate.swift */,
+				2551CA442624226500916F4B /* DelegationWithViewControllerPagingExample.swift */,
+				2551CA462624226500916F4B /* Main.storyboard */,
+				2551CA492624226A00916F4B /* Assets.xcassets */,
+				2551CA4B2624226A00916F4B /* LaunchScreen.storyboard */,
+				2551CA4E2624226A00916F4B /* Info.plist */,
+				2551CA7B2624346900916F4B /* ProgrammaticWithViewImplementation.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
 		8E6CB4431D75706900D9E045 = {
 			isa = PBXGroup;
 			children = (
 				8E6CB44F1D75706900D9E045 /* OHCubeView */,
+				2551CA3F2624226500916F4B /* Example */,
 				8E6CB44E1D75706900D9E045 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				8E6CB44D1D75706900D9E045 /* OHCubeView.framework */,
+				2551CA3E2624226500916F4B /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +101,7 @@
 		8E6CB44F1D75706900D9E045 /* OHCubeView */ = {
 			isa = PBXGroup;
 			children = (
+				253EFC4826225AA80063D596 /* PageController */,
 				8E6CB4581D75717100D9E045 /* OHCubeView.swift */,
 				8E6CB4501D75706900D9E045 /* OHCubeView.h */,
 				8E6CB4521D75706900D9E045 /* Info.plist */,
@@ -69,6 +123,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		2551CA3D2624226500916F4B /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2551CA6B2624226B00916F4B /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				2551CA3A2624226500916F4B /* Sources */,
+				2551CA3B2624226500916F4B /* Frameworks */,
+				2551CA3C2624226500916F4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Example;
+			productName = Example;
+			productReference = 2551CA3E2624226500916F4B /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 		8E6CB44C1D75706900D9E045 /* OHCubeView */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E6CB4551D75706900D9E045 /* Build configuration list for PBXNativeTarget "OHCubeView" */;
@@ -93,9 +164,14 @@
 		8E6CB4441D75706900D9E045 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Oyvind Hauge";
 				TargetAttributes = {
+					2551CA3D2624226500916F4B = {
+						CreatedOnToolsVersion = 12.2;
+						ProvisioningStyle = Automatic;
+					};
 					8E6CB44C1D75706900D9E045 = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0830;
@@ -116,11 +192,22 @@
 			projectRoot = "";
 			targets = (
 				8E6CB44C1D75706900D9E045 /* OHCubeView */,
+				2551CA3D2624226500916F4B /* Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2551CA3C2624226500916F4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2551CA4D2624226A00916F4B /* LaunchScreen.storyboard in Resources */,
+				2551CA4A2624226A00916F4B /* Assets.xcassets in Resources */,
+				2551CA482624226500916F4B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8E6CB44B1D75706900D9E045 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,17 +218,99 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2551CA3A2624226500916F4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2551CA452624226500916F4B /* DelegationWithViewControllerPagingExample.swift in Sources */,
+				2551CA412624226500916F4B /* AppDelegate.swift in Sources */,
+				2551CA7C2624346900916F4B /* ProgrammaticWithViewImplementation.swift in Sources */,
+				2551CA432624226500916F4B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8E6CB4481D75706900D9E045 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				253EFC44262252A80063D596 /* OHCubeBasePageController.swift in Sources */,
+				253EFC4A26225B040063D596 /* OHCubePagerView.swift in Sources */,
 				8E6CB4591D75717100D9E045 /* OHCubeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		2551CA462624226500916F4B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2551CA472624226500916F4B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2551CA4B2624226A00916F4B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2551CA4C2624226A00916F4B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		2551CA652624226B00916F4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yadigarbz.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2551CA662624226B00916F4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yadigarbz.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		8E6CB4531D75706900D9E045 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -298,6 +467,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2551CA6B2624226B00916F4B /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2551CA652624226B00916F4B /* Debug */,
+				2551CA662624226B00916F4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8E6CB4471D75706900D9E045 /* Build configuration list for PBXProject "OHCubeView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
